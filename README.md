@@ -1,8 +1,6 @@
 # ilcd
-
-## Install
 Driver for LCD [1602] , [2004] .for Raspberry Pi and BeagleBone.
-
+## Install
 ````bash
 $ npm install ilcd
 ````
