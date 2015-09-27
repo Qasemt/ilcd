@@ -9,6 +9,8 @@ $ npm install ilcd
 ````javascript
 var _lcd = require("./ilcd").iLCD;
 //  by default address = 0x27
-// _lcd.SetAddress(0x22); 
-_lcd.lineOut("Hello world...", 2);
+// _lcd.SetAddress(0x22);
+ var line =1;
+
+_lcd.lineOut("Hello world...", line);
 ````
