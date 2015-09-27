@@ -1,16 +1,16 @@
 {
-    "name": "ilcd",
-    "version": "0.1.0",
-    "description": "Driver for LCD 1602 2004.for Raspberry Pi and BeagleBone.",
-    "main": "ilcd.js",
-    "author": "Qasemt@gmail.com",
-    "repository": {
+  "name": "ilcd",
+  "version": "0.1.0",
+  "description": "Driver for LCD 1602 2004.for Raspberry Pi and BeagleBone.",
+  "main": "ilcd.js",
+  "author": "Qasemt@gmail.com",
+  "repository": {
     "type": "git",
-        "url": "http://github.com/korevec/node-i2c.git"
-},
-    "license": "MIT",
-    "dependencies": {
+    "url": "http://github.com/korevec/node-i2c.git"
+  },
+  "license": "MIT",
+  "dependencies": {
     "i2c": "0.2.0"
-},
-    "engine": "node >= 0.10.0"
+  },
+  "engine": "node >= 0.10.0"
 }

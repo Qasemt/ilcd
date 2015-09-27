@@ -10,6 +10,8 @@ setInterval(function () {
 
     var now = new Date();
     var dateFormat = now.toISOString().substr(0, 10);
+    //  by default address = 0x27
+    // _lcd.SetAddress(0x22);
     _lcd.lineOut("T:" + dateFormat, 2);
 
     ic++;
