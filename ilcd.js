@@ -73,6 +73,7 @@ function iLCD() {
         self.lineOut(str, line);
     };
 
+
     function lcdWrite4(data) {
 
         WritRaw(Buffer([(data | LCD_BACKLIGHT)]));
@@ -133,6 +134,10 @@ function iLCD() {
         str.split('').forEach(function (c) {
             lcdWrite(c.charCodeAt(0), 1);
         });
+    };
+    this.SetAddress=function(adr)
+    {
+        address=adr;
     };
     LCDINIT();
   //  lcdWrite(LCD_CLEARDISPLAY, 0);
