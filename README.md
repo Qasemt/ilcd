@@ -1,9 +1,10 @@
 # ilcd
-Driver for LCD [1602] , [2004] .is Tested in Raspberry Pi and BeagleBone.
+Driver for LCD ( with i2c )  [1602] , [2004] .is Tested in Raspberry Pi and BeagleBone.
 ## Install
 ````bash
 $ npm install ilcd
 ````
+
 ##Usage
 ````javascript
 var _lcd = require("./ilcd").iLCD;
