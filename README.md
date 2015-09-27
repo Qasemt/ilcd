@@ -5,7 +5,7 @@ Driver for LCD ( with i2c )  [1602] , [2004] .is Tested in Raspberry Pi and Beag
 $ npm install ilcd
 ````
 
-##Usage
+## Usage
 ````javascript
 var _lcd = require("./ilcd").iLCD;
 //  by default address = 0x27
