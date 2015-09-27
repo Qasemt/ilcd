@@ -1,7 +1,7 @@
 {
   "name": "ilcd",
   "version": "0.1.0",
-  "description": "Driver for LCD 1602 2004.for Raspberry Pi and BeagleBone.",
+  "description": "Driver for LCD 1602 2004.is tested in  Raspberry Pi and BeagleBone.",
   "main": "ilcd.js",
   "author": "Qasemt@gmail.com",
   "repository": {
