@@ -1,5 +1,7 @@
+
 function iLCD() {
-    var i2c = require('i2c');
+
+    var i2c = require('./i2c');
     var address = 0x27;
 
 
@@ -63,15 +65,9 @@ function iLCD() {
         // sleep(.0005)
         WritRaw(((data & ~En) | LCD_BACKLIGHT));
         // sleep(.0001)
-    }
-    var ClearLine = function (line) {
-
-        var str = "";
-        for (ii = 1; ii <= 16; ii++) {
-            str += " ";
-        }
-        self.lineOut(str, line);
     };
+
+
 
 
     function lcdWrite4(data) {
@@ -102,20 +98,7 @@ function iLCD() {
         }
     }
 
-    this.ShowTime = function () {
 
-        //  var now = new Date();
-        //  if (_LastMinuteValue != now.getMinutes()) {
-        var j = Jdate.JDate();
-        var persianDateStr = j.toString('yy/MM/ddHH:mm:ss');
-
-        self.lineOut(persianDateStr, 2);
-        j = null;
-
-        // _LastMinuteValue = now.getMinutes();
-        //   }
-
-    };
 
     /*
      * Write a string to the specified LCD line.
@@ -134,6 +117,19 @@ function iLCD() {
         str.split('').forEach(function (c) {
             lcdWrite(c.charCodeAt(0), 1);
         });
+    };
+    this.ClearLine = function (line) {
+
+        var str = "";
+        for (ii = 1; ii <= 16; ii++) {
+            str += " ";
+        }
+        self.lineOut(str, line);
+    };
+
+    this.ClearDisplay=function()
+    {
+        lcdWrite(LCD_CLEARDISPLAY, 0);
     };
     this.SetAddress=function(adr)
     {

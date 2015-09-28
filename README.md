@@ -13,4 +13,12 @@ var _lcd = require("./ilcd").iLCD;
  var line =1;
 
 _lcd.lineOut("Hello world...", line);
+
+
+_lcd.ClearLine(line);
+
+
+_lcd.ClearDisplay();
+
+
 ````
