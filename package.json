@@ -17,7 +17,11 @@
     "bbb",
     "beagleboneblack",
     "i2c",
-    "raspberrypi"
-,"lcd"
+    "raspberrypi",
+    "lcd",
+    "pi",
+    "BeagleBone",
+    "Driver",
+    "1602","BBB"
   ]
 }
