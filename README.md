@@ -26,7 +26,7 @@ _lcd.ClearDisplay();
 
 ### Author:
 
-* Qasem Taheri, Qasemt@gmail.com
+* Qasem Taheri: Qasemt@gmail.com
 
 
 ### License:
