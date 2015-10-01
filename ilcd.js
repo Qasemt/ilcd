@@ -1,7 +1,8 @@
-
 function iLCD() {
+    require('coffee-script/register');
+    var i2c = require('i2c');
 
-    var i2c = require('./i2c');
+    var is_rpi_available = true;
     var address = 0x27;
 
 
@@ -68,8 +69,6 @@ function iLCD() {
     };
 
 
-
-
     function lcdWrite4(data) {
 
         WritRaw(Buffer([(data | LCD_BACKLIGHT)]));
@@ -99,7 +98,6 @@ function iLCD() {
     }
 
 
-
     /*
      * Write a string to the specified LCD line.
      */
@@ -127,16 +125,30 @@ function iLCD() {
         self.lineOut(str, line);
     };
 
-    this.ClearDisplay=function()
-    {
+    this.ClearDisplay = function () {
         lcdWrite(LCD_CLEARDISPLAY, 0);
     };
-    this.SetAddress=function(adr)
-    {
-        address=adr;
+    this.SetAddress = function (adr) {
+        address = adr;
+    };
+    /** Turn display off */
+    this.DisplayOff = function () {
+        WritRaw(LCD_DISPLAYCONTROL | LCD_DISPLAYOFF);
+    };
+    /** Turn display on */
+    this.DisplayOn = function () {
+        LCDINIT();
+        lcdWrite(LCD_DISPLAYCONTROL | LCD_DISPLAYON, 0);
+    };
+
+    this.BackLightOn = function () {
+        lcdWrite(LCD_DISPLAYCONTROL | LCD_DISPLAYON | LCD_BACKLIGHT, 0);
+    };
+    this.BackLightOff = function () {
+        WritRaw(LCD_DISPLAYCONTROL | LCD_NOBACKLIGHT);
     };
     LCDINIT();
-  //  lcdWrite(LCD_CLEARDISPLAY, 0);
+    //  lcdWrite(LCD_CLEARDISPLAY, 0);
 }
 
 

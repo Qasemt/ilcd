@@ -7,7 +7,7 @@ $ npm install ilcd
 
 ## Usage
 ````javascript
-var _lcd = require("./ilcd").iLCD;
+var _lcd = require("ilcd").iLCD;
 //  by default address = 0x27
 // _lcd.SetAddress(0x22);
  var line =1;
@@ -19,6 +19,11 @@ _lcd.ClearLine(line);
 
 
 _lcd.ClearDisplay();
+
+//_lcd.BackLightOn();
+//_lcd.BackLightOff();
+//_lcd.DisplayOff();
+//_lcd.BackLightOn();
 
 
 ````

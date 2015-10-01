@@ -1,6 +1,6 @@
 {
   "name": "ilcd",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Driver for LCD ( with i2c ) [1602] , [2004] .is Tested in Raspberry Pi and BeagleBone.",
   "main": "ilcd.js",
   "author": "Qasemt@gmail.com",
