@@ -8,13 +8,13 @@ setTimeout(function() {
     _lcd.BackLightOn();
 },1000);
 setTimeout(function() {
-    _lcd.lineOut("hello worlkd", 2);
+    _lcd.lineOut("hello World", 2);
 },3000);
 setTimeout(function() {
     _lcd.ClearDisplay();
 },5000);
 setTimeout(function() {
-    _lcd.lineOut("22222 worlkd222", 1);
+    _lcd.lineOut("11122334455", 1);
 },7000);
 setTimeout(function() {
     _lcd.BackLightOff();
