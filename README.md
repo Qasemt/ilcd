@@ -29,13 +29,14 @@ _lcd.ClearDisplay();
 ````
 
 ###Note 
+```javascript
 i2c module for raspbery pi model B
 "dependencies":
      "i2c": "0.2.0"
  
 i2c module for rapsberry pi model b < %
     "i2c": "0.2.3"
-    
+ ```   
    
 ### Author:
 
